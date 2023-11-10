@@ -7,6 +7,7 @@ import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import { Route, Routes } from "react-router-dom"
 import Footer from "./Footer"
+import SuccessPage from './SuccessPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/portfolio' element={<Portfolio />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/successpage' element={<SuccessPage />} />
     </Routes>
   </div>
   <Footer />

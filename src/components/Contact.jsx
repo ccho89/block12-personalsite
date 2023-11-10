@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css'
 import FormInput from './FormInput'
+import { useNavigate } from "react-router-dom"
+import SuccessPage from '../SuccessPage';
+
 
 export default function Contact() {
+
+  const navigate = useNavigate();
+
+    const handleClick = () => {
+      console.log('hello');
+    }
 
     const [values, setValues] = useState({
         name: "",
@@ -60,7 +68,8 @@ export default function Contact() {
     {inputs.map((input) => (
     <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
     ))}
-     <button>Submit</button>
+    <button onClick={()=>navigate('/successpage')}>Submit</button>
+     {/* <button onClick={handleClick}>Submit</button> */}
     </form>
    
     </div>
@@ -68,3 +77,5 @@ export default function Contact() {
     </>
     )
 }
+
+

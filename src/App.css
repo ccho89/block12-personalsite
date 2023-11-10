@@ -135,3 +135,12 @@ button {
   display: flex;
   justify-content: flex-start;
 }
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  max-width: 50%;
+}
